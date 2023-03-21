@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import { useState } from "react";
 
 const Button3 = ({answers, checked, id , sent, selected, correct , className, clicked}) => {
