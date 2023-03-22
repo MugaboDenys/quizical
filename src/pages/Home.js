@@ -6,7 +6,7 @@ const Home = () => {
             <div>
                 <h2 className="text-[#293264] text-3xl font-medium">Quizzical</h2>
                 <p className="text-[#293264]">Your Online self assessment</p>
-                <Button1 text={"Start quiz"} className={"px-10 mt-10"} link={'/questions'} />
+                <Button1 text={"Start quiz"} className={"px-10 mt-10"} link={'/question'} />
             </div>
             <img alt="" src="/blobs1.png" className="absolute left-0 bottom-0"/>
         </div>

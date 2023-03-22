@@ -12,10 +12,6 @@ function App() {
           <Route path="/Question" element={<Question />}></Route>
         </Routes>
       </BrowserRouter>
-   
-      {/* <Button1 text={"Start quiz"} className={"px-10"} />
-      <Button2 text={"Cabbage Patch Kids"} className={"text-xl"} />
-      <Button3 text={"Mercury"} className={"text-xl"} />  */}
     </div>
   );
 }
