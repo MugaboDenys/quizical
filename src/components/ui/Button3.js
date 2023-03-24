@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const Button3 = ({answers, checked, id , sent, selected, correct , className, clicked}) => {
-    const [sel, setSel] = useState(null)
+    const [select, setSelect] = useState(null)
     let styles
     
     function handleClick(answer) {
-        setSel(answer)
+        setSelect(answer)
         clicked(id,answer)
     }
     return ( 
@@ -13,9 +13,9 @@ const Button3 = ({answers, checked, id , sent, selected, correct , className, cl
             {answers.map((item, index)=>{
                 
                 if(checked){
-                    styles={ backgroundColor: sel === item && '#D6DBF5' }
+                    styles={ backgroundColor: select === item && '#D6DBF5' }
                     if(sent){
-                        if(sel === item){
+                        if(select === item){
                             if(correct === item){
                                 styles={ backgroundColor: '#94D7A2' }
                             }
