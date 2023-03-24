@@ -19,8 +19,8 @@ const Question = () => {
                 let res = await fetch(url);
                 const data = await res.json()
                 let QtnsArr = []
-                data.results.forEach(qtn =>
-                     QtnsArr.push({id: nanoid(), answers:_.shuffle([qtn.correct_answer, ...qtn.incorrect_answers]), question : qtn.question, correct:qtn.correct_answer, checked: false, selected:null}))
+                data.results.forEach(question =>
+                     QtnsArr.push({id: nanoid(), answers:_.shuffle([question.correct_answer, ...question.incorrect_answers]), question : question.question, correct:question.correct_answer, checked: false, selected:null}))
                 setServerData(QtnsArr)
             } catch (error) {
                 console.log(error);
