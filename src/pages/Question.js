@@ -30,13 +30,13 @@ const Question = () => {
         
     },[session])
 
-  const handlePlayAgain = () => {
-       
+    function handlePlayAgain(){
+        setSession(prevSession=>prevSession +1)
         setSubmit(false)
     }
     
     // console.log(serverData)
-    const handleSelected = (id, answer) => {
+    function handleSelected(id, answer){
         setServerData(questions => questions.map(question =>{
             
             return  question.id === id ? {...question, checked: !question.checked, selected : answer} : question
@@ -48,7 +48,7 @@ const Question = () => {
     
     function handleCheck(){
         let selected = true;
-        let tr = 0
+        let trueAnswer = 0
         serverData.forEach(qtn=>{
             if(qtn.selected === null){
                 selected = false;
@@ -62,12 +62,12 @@ const Question = () => {
             return {...qtn, checked : true}
         }))
         setSubmit(true)
-        serverData.forEach(qtn=>{
-            if(qtn.selected === qtn.correct){
-               tr +=1
+        serverData.forEach(question=>{
+            if(question.selected === question.correct){
+               trueAnswer +=1
             }
         })
-        setCorrect(tr)
+        setCorrect(trueAnswer)
         
     }
 
