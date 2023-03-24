@@ -30,8 +30,8 @@ const Question = () => {
         
     },[session])
 
-    function handlePlayAgain(){
-        setSession(prevSession=>prevSession +1)
+  const handlePlayAgain = () => {
+       
         setSubmit(false)
     }
     
