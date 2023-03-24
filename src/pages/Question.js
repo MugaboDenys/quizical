@@ -36,7 +36,7 @@ const Question = () => {
     }
     
     // console.log(serverData)
-    function handleSelected(id, answer){
+    const handleSelected = (id, answer) => {
         setServerData(questions => questions.map(question =>{
             
             return  question.id === id ? {...question, checked: !question.checked, selected : answer} : question
